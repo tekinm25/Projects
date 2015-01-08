@@ -1,14 +1,14 @@
-# Find PI to the Nth Digit
+# Find e to the Nth Digit
 # Enter a number and have the program generate 
-# PI up to that many decimal places.
+# e up to that many decimal places.
 
-from math import pi
+from math import e
 
-# Doing it this way allows you to generate pi to the desired
+# Doing it this way allows you to generate e to the desired
 # decimal place (below 12) without having the last digit rounded
 def precision():
-    print("How many decimal places of pi do you want to see?")
-    a = str(pi)
+    print("How many decimal places of e do you want to see?")
+    a = str(e)
     x = raw_input('> ')
     try:
         if int(x) > 0 and int(x) <= 11:
@@ -18,7 +18,7 @@ def precision():
             # future problems generated number in
             z = float(y)
             print z
-            print pi
+            print e
         elif int(x) <= 0 or int(x) > 11:
             print("ValueError: Provide a positive integer that is less than 11")
             precision()
