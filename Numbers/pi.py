@@ -7,6 +7,7 @@ from math import pi
 # Doing it this way allows you to generate pi to the desired
 # decimal place (below 12) without having the last digit rounded
 def precision():
+	print("How many decimal places of pi do you want to see?")
 	a = raw_input('> ')
 	try:
 		if int(a) > 0 and int(a) < 12:
@@ -15,12 +16,11 @@ def precision():
 			z = int(y)
 			b = z / float(10 ** int(x))
 			print b
-			print pi
 		elif int(a) <= 0 or int(a) >= 12:
-			print "Error: Input must be a positive integer and less than 12"
+			print("Error: Input must be a positive integer and less than 12")
 			precision()
 	except ValueError:
-		print "ValueError: Input be an integer"
+		print("ValueError: Input be an integer")
 		precision()
 	
 precision()
